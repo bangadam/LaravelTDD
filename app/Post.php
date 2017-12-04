@@ -8,6 +8,8 @@ class Post extends Model
 {
     protected $table = 'posts';
 
+    protected $guarded = ['id'];
+
     public function comment() {
         return $this->hasMany(Comment::class);
     }

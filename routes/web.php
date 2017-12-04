@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/blog', 'PostController@index');
 Route::get('/blog/{post}', 'PostController@show');
+Route::post('/post', 'PostController@store');
+Route::view('/create','posts.create')->middleware('auth');
